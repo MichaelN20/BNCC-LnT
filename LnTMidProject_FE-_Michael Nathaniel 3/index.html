@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+
+
+<body>
+    <div class="navbar">
+        <header>
+            <a class="logo" href="/">
+                <h3 class="name">Michael Nathaniel</h3>
+            </a>
+
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutme">About Me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+
+                </ul>
+            </nav>
+            <div id="menu-bar">
+                <img src="assets/menu_bar.png" alt="">
+            </div>
+        </header>
+        <nav id="mobile-menu" class="hide-menu">
+            <ul class="nav__links">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#aboutme">About Me</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <script>
+        /*==================== MENU SHOW Y HIDDEN ====================*/
+        const navMenu = document.getElementById('mobile-menu'),
+            navToggle = document.getElementById('menu-bar')
+
+        var opened = false;
+
+        navToggle.addEventListener('click', () => {
+            if (opened) {
+                navMenu.classList.add('hide-menu')
+                opened = false
+            } else {
+                navMenu.classList.remove('hide-menu')
+                opened = true
+            }
+
+        })
+    </script>
+
+    <!-- Home -->
+    <section>
+        <div class="home" id="home">
+            <div class="home_text">
+                <div>
+                    <h1 class="home_title">Welcome to Michael Nathaniel's Portfolio</h1>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section>
+        <div class="about" id="aboutme">
+            <div class="about_container">
+                <div class="about_photo">
+                    <img src="assets/fotodiri.jpeg" alt=" ">
+                </div>
+                <div class="about_text">
+                    <h1 class="about_title">About Me</h1>
+
+                    <br>
+                    <p class="about_isi">
+                        Skilled and passionate students with an interest in technology and business. Likes to work in a team and able to lead others on accepted projects
+                    </p>
+                </div>
+            </div>
+            <table class="education">
+                <h1>Education</h1>
+                <tr>
+                    <th>Edukasi</th>
+                    <th>Insitusi</th>
+                    <th>Tahun</th>
+                    <th>Deskripsi</th>
+                </tr>
+                <tr>
+                    <td>Senior High School</td>
+                    <td>St.Theresia</td>
+                    <td>2018-2021</td>
+                    <td>science Major</td>
+                </tr>
+                <tr>
+                    <td>University</td>
+                    <td>Bina Nusantara</td>
+                    <td>2021-present</td>
+                    <td>Information Systems major</td>
+                </tr>
+            </table>
+
+            <div class="hardskill">
+                <h3 style="margin-bottom: 1rem;">Skills</h3>
+                <div class="hardskill_list">
+
+                    <div class="bar">
+                        <p>HTML & CSS </p>
+                        <progress max="100" value="30"> 30% </progress>
+                    </div>
+                    <div class="bar">
+                        <p>Java Programmin</p>
+                        <progress max="100" value="70"> 70% </progress>
+                    </div>
+                    <div class="bar">
+                        <p>C++ Programming</p>
+                        <progress max="100" value="70"> 70% </progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Portfolio -->
+    <section>
+        <div class="portfolio" id="portfolio">
+            <div class="portfolio_title">
+                <h1 style="font-weight: 700;">Portfolio</h1>
+            </div>
+
+            <div class="preview">
+                <div class="portfolio-img">
+                    <img src="assets/IMG_6454.jpeg" alt="">
+
+                    <p>Short Movie - Candu</p>
+                </div>
+
+            </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section>
+        <div class="contact" id="contact">
+
+            <div class="form">
+
+                <div class="user-profile">
+                </div>
+
+                <form>
+                    <h1>Contact Me</h1>
+                    <label for="fname">Name :</label> <br>
+                    <input type="text" id="name" name="fname">
+
+                    <label for="email">Email :</label> <br>
+                    <input type="email" name="email">
+
+                    <label for="linkedin">LinkedIn :</label> <br>
+                    <input type="text" id="linkedin" name="linkedin">
+
+                    <label for="comment">Comment :</label> <br>
+                    <!-- <input type="text" id="Comment" name="Comment"> -->
+
+                    <textarea name="Message" id="Message" rows="7" form="contact-form"></textarea>
+
+                    <input type="submit" value="Send">
+                </form>
+
+                <div class="contactme">
+                    <div>
+                        <p>
+                            Email : michael@gmail.com
+                        </p>
+                        <p>
+                            Phone : 081234567890
+                        </p>
+                        <p>
+                            LinkedIn : michaelnathaniel
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
